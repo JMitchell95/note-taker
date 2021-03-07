@@ -13,14 +13,16 @@
 </head>
 
 <body>
+
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="/">Note Taker
     </a>
     <div class="icons">
-      <i class="fas fa-save text-light save-note"></i>
-      <i class="fas fa-pen text-light new-note"></i>
+      <button  type="button" class="btn btn-primary" id="save-note">Save Entry</button>
+      <button type="button" class="btn btn-success " id="new-note">New Note</button>
     </div>
   </nav>
+
   <div class="container-fluid">
     <div class="row">
       <div class="col-4 list-container">
@@ -29,9 +31,10 @@
           </ul>
         </div>
       </div>
+
       <div class="form-group">
-        <input class="note-title" placeholder="Note Title" maxlength="28" type="text">
-        <textarea class="note-textarea" placeholder="Note Text"></textarea>
+        <input class="form-control" id="note-title"placeholder="Note Title" maxlength="" type="text">
+        <textarea class="form-control" id="note-textarea" placeholder="Note Text"></textarea>
       </div>
     </div>
   </div>

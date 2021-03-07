@@ -5,10 +5,10 @@ let newNoteBtn;
 let noteList;
 
 if (window.location.pathname === '/notes') {
-  noteTitle = document.querySelector('.note-title');
-  noteText = document.querySelector('.note-textarea');
-  saveNoteBtn = document.querySelector('.save-note');
-  newNoteBtn = document.querySelector('.new-note');
+  noteTitle = document.querySelector('#note-title');
+  noteText = document.querySelector('#note-textarea');
+  saveNoteBtn = document.querySelector('#save-note');
+  newNoteBtn = document.querySelector('#new-note');
   noteList = document.querySelectorAll('.list-container .list-group');
 }
 
@@ -126,7 +126,7 @@ const renderNoteList = async (notes) => {
   // Returns HTML element with or without a delete button
   const createLi = (text, delBtn = true) => {
     const liEl = document.createElement('li');
-    liEl.classList.add('list-group-item');
+    liEl.classList.add('list-group-item d-flex');
 
     const spanEl = document.createElement('span');
     spanEl.innerText = text;
